@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Sparkles } from "lucide-react";
+import { trackPixelEvent } from "@/lib/pixel";
 
 const FinalCTASection = () => {
+  const handleCTAClick = () => {
+    trackPixelEvent("Contact", { content_name: "Final CTA" });
+    document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="py-20 md:py-28 bg-background relative overflow-hidden">
       {/* Decorative background elements */}
@@ -47,7 +53,7 @@ const FinalCTASection = () => {
             variant="hero" 
             size="xl" 
             className="mb-6"
-            onClick={() => document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={handleCTAClick}
           >
             Agende sua consulta online
           </Button>

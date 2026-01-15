@@ -1,8 +1,14 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Leaf } from "lucide-react";
+import { trackPixelEvent } from "@/lib/pixel";
 
 const HeroSection = () => {
+  const handleCTAClick = () => {
+    trackPixelEvent("Contact", { content_name: "Hero CTA" });
+    document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -42,7 +48,7 @@ const HeroSection = () => {
           <Button 
             variant="hero" 
             size="xl"
-            onClick={() => document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={handleCTAClick}
           >
             Agendar consulta online
           </Button>
