@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Sparkles } from "lucide-react";
-import { trackPixelEvent } from "@/lib/pixel";
+import { trackContact } from "@/lib/analytics";
 
 const FinalCTASection = () => {
   const handleCTAClick = () => {
-    trackPixelEvent("Contact", { content_name: "Final CTA" });
+    trackContact("Final CTA");
     document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' });
   };
 

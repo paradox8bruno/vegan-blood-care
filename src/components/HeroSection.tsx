@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Leaf } from "lucide-react";
-import { trackPixelEvent } from "@/lib/pixel";
+import { trackContact } from "@/lib/analytics";
 
 const HeroSection = () => {
   const handleCTAClick = () => {
-    trackPixelEvent("Contact", { content_name: "Hero CTA" });
+    trackContact("Hero CTA");
     document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' });
   };
 

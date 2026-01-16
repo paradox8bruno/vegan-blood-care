@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { trackPixelEvent } from "@/lib/pixel";
+import { trackLead } from "@/lib/analytics";
 
 const DoctoraliaWidget = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const DoctoraliaWidget = () => {
   }, []);
 
   const handleLeadClick = () => {
-    trackPixelEvent("Lead", { content_name: "Doctoralia Widget" });
+    trackLead("Doctoralia Widget");
   };
 
   return (
