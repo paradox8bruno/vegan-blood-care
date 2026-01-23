@@ -34,8 +34,8 @@ const HeroSection = () => {
         
         {/* Headline */}
         <h1 className="animate-fade-up-delay-1 font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight mb-6">
-          Sua escolha alimentar não é o problema.<br />
-          A falta de acompanhamento é.
+          Ser vegetariana não é um problema.<br />
+          A falta de acompanhamento pode ser.
         </h1>
         
         {/* Subheadline */}

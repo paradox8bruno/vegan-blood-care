@@ -14,9 +14,9 @@ const Index = () => {
       <HeroSection />
       <IdentificationSection />
       <DoctorSection />
-      <ObjectionsSection />
       <ConsultationSection />
       <AudienceSection />
+      <ObjectionsSection />
       <FinalCTASection />
       <DoctoraliaWidget />
       <Footer />
