@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { trackLead } from "@/lib/analytics";
 
 const DoctoraliaWidget = () => {
   useEffect(() => {
@@ -7,14 +6,11 @@ const DoctoraliaWidget = () => {
     if (!document.getElementById("zl-widget-s")) {
       const script = document.createElement("script");
       script.id = "zl-widget-s";
-      script.src = "//platform.docplanner.com/js/widget.js";
+      script.src = "https://platform.docplanner.com/js/widget.js";
+      script.async = true;
       document.body.appendChild(script);
     }
   }, []);
-
-  const handleLeadClick = () => {
-    trackLead("Doctoralia Widget");
-  };
 
   return (
     <section id="agendar" className="py-16 md:py-24 bg-accent/30">
@@ -23,7 +19,7 @@ const DoctoraliaWidget = () => {
           <h2 className="section-title text-2xl md:text-3xl mb-8">
             Agende sua consulta
           </h2>
-          <div className="flex justify-center" onClick={handleLeadClick}>
+          <div className="flex justify-center">
             <a
               id="zl-url"
               className="zl-url"
@@ -39,6 +35,17 @@ const DoctoraliaWidget = () => {
               Marina Steffli Machado - Doctoralia.com.br
             </a>
           </div>
+          <a
+            className="inline-flex min-h-11 items-center justify-center mt-6 text-primary underline underline-offset-4 font-body"
+            href="https://www.doctoralia.com.br/marina-steffli-machado/hematologista/sao-jose"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-agendamento="true"
+            data-posicao-cta="agendamento"
+            data-modalidade-pretendida="online"
+          >
+            Abrir agenda no Doctoralia
+          </a>
         </div>
       </div>
     </section>

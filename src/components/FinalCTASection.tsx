@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Shield, Sparkles } from "lucide-react";
-import { trackContact } from "@/lib/analytics";
+import { trackBookingStart } from "@/lib/analytics";
 
 const FinalCTASection = () => {
   const handleCTAClick = () => {
-    trackContact("Final CTA");
+    trackBookingStart("agendamento");
     document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' });
   };
 

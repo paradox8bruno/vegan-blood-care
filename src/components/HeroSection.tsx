@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 import { Leaf } from "lucide-react";
-import { trackContact } from "@/lib/analytics";
+import { trackBookingStart } from "@/lib/analytics";
 
 const HeroSection = () => {
   const handleCTAClick = () => {
-    trackContact("Hero CTA");
+    trackBookingStart("hero");
     document.getElementById('agendar')?.scrollIntoView({ behavior: 'smooth' });
   };
 

@@ -23,6 +23,7 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm font-body">
               © 2026 Todos os direitos reservados
             </p>
+            <a className="inline-flex min-h-11 items-center text-muted-foreground text-sm font-body underline underline-offset-4" href="https://www.dramarinasteffli.com.br/privacidade">Privacidade</a>
           </div>
         </div>
       </div>
