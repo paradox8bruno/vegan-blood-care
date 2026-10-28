@@ -1,73 +1,25 @@
-# Welcome to your Lovable project
+# Landing page — Dra. Marina Steffli
 
-## Project info
-
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Aplicativo React/TypeScript/Vite do projeto `vegan-blood-care`, associado na documentação à LP `lp.dramarinasteffli.com.br`. Repositório Git original preservado, com remote `https://github.com/paradox8bruno/vegan-blood-care.git`.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Desenvolvimento configurado na porta 8080. Verificar a URL exibida pelo Vite.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm test
+npm run build
+npm run lint
+```
 
-**Use GitHub Codespaces**
+Saída de build em `dist/`. A LP mantém configuração própria de tracking em `public/tracking-config.js`, com GA4 principal e adicional e Pixel já existente; não copiar a configuração vazia do principal sobre ela.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- [Arquitetura do conjunto](https://github.com/paradox8bruno/dra-marina-steffli/blob/main/documentacao/ARQUITETURA.md)
+- [Operação e publicação](https://github.com/paradox8bruno/dra-marina-steffli/blob/main/documentacao/OPERACAO.md)
+- [Estado e pendências](https://github.com/paradox8bruno/dra-marina-steffli/blob/main/documentacao/ESTADO-E-PENDENCIAS.md)
+- [README original da origem](HISTORICO-README.md)
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+O projeto central é privado; os documentos acima exigem acesso a ele. A LP continua com repositório independente e também integra a pasta central como submódulo. A cópia original não tinha vínculo local `.vercel`, portanto é necessário identificar o projeto existente antes de publicar pela CLI. A atualização deste README não altera código ou configuração de produção.
